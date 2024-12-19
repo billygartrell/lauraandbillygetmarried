@@ -1,0 +1,145 @@
+html{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family:helvetica, arial, sans-serif;
+}
+body{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.container{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-top:20px;
+}
+
+.content-container{
+    display:flex;
+    flex-direction: column;
+    width:800px;
+    height:100%;
+    justify-content: space-between;
+}
+
+.navigation{
+    display:flex;
+    justify-content: center;
+    gap:24px;
+
+}
+
+.border-top{
+    height:50px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    border-bottom: 1px solid #f9ecec;
+}
+
+.middle-container{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+}
+
+.border-bottom{
+    height:50px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    border-top: 1px solid #f9ecec;
+}
+
+.l{
+    border-right:1px solid #f9ecec;
+    width:50px;
+}
+
+.m{
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.r{
+    border-left:1px solid #f9ecec;
+    width:50px;
+}
+
+.page-contents{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    height:100%;
+}
+
+.full-img{
+    width:100%;
+}
+
+a {
+    color:#262424;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:visited{
+    color:#262424;
+    text-decoration: none;
+}
+a:hover{
+    color:#FFDBDB;
+}
+
+
+.svg-container{
+    position:absolute;
+    left:25%;
+    top:25%;
+}
+
+.rotate{
+    animation-name: rotate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.nav-item{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+
+}
+
+.active{
+    width:80%;
+    margin: auto;
+    height:2px;
+    background-color: #FFDBDB;
+    border: 1px solid #FFDBDB;
+    border-radius: 5px;
+}
