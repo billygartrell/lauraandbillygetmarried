@@ -143,3 +143,22 @@ a:hover{
     border: 1px solid #FFDBDB;
     border-radius: 5px;
 }
+
+.plant2{
+    position:absolute;
+    top:55%;
+    left:-5%;
+    width:20%;
+    z-index: -1;
+    transform: rotate(10deg);
+
+}
+
+.plant1{
+    position:absolute;
+    top:5%;
+    left:90%;
+    width:12%;
+    z-index: -1;
+    transform: rotate(-20deg);
+}
