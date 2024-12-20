@@ -22,7 +22,6 @@ body{
     justify-content: center;
     align-items:center;
     padding-top:20px;
-    overflow:hidden;
 }
 
 .content-container{
@@ -133,6 +132,10 @@ a:hover{
     
 }
 
+.image-container{
+    position:relative;
+}
+
 @keyframes rotate {
     from {
       transform: rotate(0deg);
@@ -182,6 +185,12 @@ a:hover{
 
 } 
 
+.page-contents{
+    background-image: url("images/plant-2.png");
+    background-repeat: no-repeat;
+    background-position: -5% 95%;
+    background-size:100px;
+}
 
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -225,8 +234,11 @@ a:hover{
     .rotate{
         width:250px;
         height:250px;   
-
- }
+    }
+    .page-contents{
+        background-position: -5% 95%;
+        background-size:300px;
+    }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
