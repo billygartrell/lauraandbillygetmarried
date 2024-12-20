@@ -1,3 +1,7 @@
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
 html{
     width:100%;
     height:100%;
@@ -18,30 +22,28 @@ body{
     justify-content: center;
     align-items:center;
     padding-top:20px;
+    overflow:hidden;
 }
 
 .content-container{
     display:flex;
     flex-direction: column;
-    width:800px;
+    /* width:800px; */
     height:100%;
     justify-content: space-between;
+    align-items: center;
+
 }
 
 .navigation{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap:24px;
-
+    font-size:12px;
 }
 
-.border-top{
-    height:50px;
-    width:100%;
-    display:flex;
-    flex-direction: row;
-    border-bottom: 1px solid #f9ecec;
-}
+
 
 .middle-container{
     width:100%;
@@ -50,8 +52,16 @@ body{
     flex-direction: row;
 }
 
+.border-top{
+    height:20px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    border-bottom: 1px solid #f9ecec;
+}
+
 .border-bottom{
-    height:50px;
+    height:20px;
     width:100%;
     display:flex;
     flex-direction: row;
@@ -60,7 +70,7 @@ body{
 
 .l{
     border-right:1px solid #f9ecec;
-    width:50px;
+    width:20px;
 }
 
 .m{
@@ -71,7 +81,7 @@ body{
 
 .r{
     border-left:1px solid #f9ecec;
-    width:50px;
+    width:20px;
 }
 
 .page-contents{
@@ -80,6 +90,8 @@ body{
     align-content: space-between;
     justify-content: space-between;
     height:100%;
+    width:100%;
+    overflow: hidden;
 }
 
 .full-img{
@@ -106,8 +118,8 @@ a:hover{
 
 .svg-container{
     position:absolute;
-    left:25%;
-    top:25%;
+    left:0%;
+    top:35%;
 }
 
 .rotate{
@@ -115,6 +127,8 @@ a:hover{
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    width:150px;
+    height:150px;
 
     
 }
@@ -162,3 +176,70 @@ a:hover{
     z-index: -1;
     transform: rotate(-20deg);
 }
+
+.text-container{
+    padding:40px;
+
+} 
+
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+    .border-top{
+        height:50px;
+    }
+    
+    .border-bottom{
+        height:50px;
+    }
+    
+    .l{
+        width:50px;
+    }
+    
+    .r{
+        width:50px;
+    }
+
+    .full-img{
+        width:800px;
+    }
+
+    .navigation{
+
+        font-size:14px;
+    }
+
+    .svg-container{
+        top:25%;
+        left:25%;
+    }
+
+    .rotate{
+        width:250px;
+        height:250px;   
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    .text-container{
+        width:400px;
+    }
+
+
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { ... }
