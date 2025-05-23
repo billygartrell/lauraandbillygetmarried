@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <title>B + L Things to Do</title>
+    <title>B + L RSVP</title>
   </head>
   <body>
     <div class="page-contents">
@@ -33,14 +33,15 @@
                         </div>
                         <div class="nav-item">
                           <a href="travel.html">travel</a>
-
                         </div>
                         <div class="nav-item">
                           <a href="gifts.html">gifts</a>
-
                         </div>
                         <div class="nav-item">
                           <a href="things-to-do.html">things to do</a>
+                        </div>
+                        <div class="nav-item">
+                          <a href="rsvp.html">rsvp</a>
                           <div class="active"></div>
 
                         </div>
@@ -49,12 +50,43 @@
                 </div>
 
                 <div class="text-container">
-                  <h2>Things To Do</h2>
-                  <p>We made a map of our favorite places in the city! Check out the link below for favorite restaurants, sights to see, and more.</p><br><br>
-                  <a href="https://www.google.com/maps/d/u/1/viewer?mid=1pZXajMyVr9pSFB4mDbPdpPnKgUdIQ8U&femb=1&ll=40.71452354302621%2C-73.95429095&z=13" target="_blank" title="A Map of Things to Do"><button>View Map</button></a>
+                  <h2>RSVP</h2>
+                  <p>We hope you can make it! Please let us know by filling out the form below.</p><br><br>
+
+                  <form netlify>
+                    <label for="name">Your Name(s)</label>
+                    <input id="name" type="text"><br>
+
+                    <label for="name">Your Email Address</label>
+                    <input id="email" type="email"><br>
+
+
+                    <label for="name">Will you be attending?</label>
+
+                    <div class="radio-container">
+                      <div class="radio-input">
+                        <input type="radio" id="attending" name="attending" value="yes">
+                        <label for="attending">yes</label><br>
+                      </div>
+                      <div class="radio-input">
+                        <input type="radio" id="not-attending" name="attending" value="no">
+                        <label for="not-attending">no</label><br>
+                      </div>
+                    </div>
+                    <br>
+
+                    <label for="diet">Do you have any dietary restrictions?</label>
+                    <input id="diet" type="text"><br>
+
+                    <label for="diet">Send a message to the couple!</label>
+                    <textarea></textarea><br>
+
+                    <button type="submit">Submit</button>
+
+
+                  </form>
          
                 </div>
-
 
 
         
@@ -63,14 +95,11 @@
 
         
             </div>
-
-        
     
           </div>
         </div>
         <div class="r">
         </div>
-
       </div>
       <div class="border-bottom">
         <div class="l">
@@ -80,14 +109,9 @@
         <div class="r">
         </div>
       </div>
-  
     </div>   
-    <!-- <div class="image container">
-      <img class="plant2" src="images/plant-2.png">
-    </div>
-    <div class="image container">
-      <img class="plant1" src="images/plant-1.png">
-    </div> -->
+    <!-- <img class="plant2" src="images/plant-2.png">
+    <img class="plant1" src="images/plant-1.png"> -->
 
   </body>
 </html>
