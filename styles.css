@@ -55,6 +55,7 @@ button{
 button:hover{
     background-color: white;
     cursor: pointer;
+    color:#262424;
 }
 
 .middle-container{
