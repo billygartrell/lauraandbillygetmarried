@@ -55,31 +55,30 @@
 
                   <form netlify>
                     <label for="name">Your Name(s)</label>
-                    <input id="name" type="text"><br>
+                    <input id="name" name="attendee-names" type="text"><br>
 
                     <label for="name">Your Email Address</label>
-                    <input id="email" type="email"><br>
-
+                    <input id="email" name="email" type="email"><br>
 
                     <label for="name">Will you be attending?</label>
 
                     <div class="radio-container">
                       <div class="radio-input">
-                        <input type="radio" id="attending" name="attending" value="yes">
+                        <input type="radio" id="attending" name="attending">
                         <label for="attending">yes</label><br>
                       </div>
                       <div class="radio-input">
-                        <input type="radio" id="not-attending" name="attending" value="no">
+                        <input type="radio" id="not-attending" name="attending">
                         <label for="not-attending">no</label><br>
                       </div>
                     </div>
                     <br>
 
                     <label for="diet">Do you have any dietary restrictions?</label>
-                    <input id="diet" type="text"><br>
+                    <input id="diet" type="text" name="dietary-restrictions"><br>
 
                     <label for="diet">Send a message to the couple!</label>
-                    <textarea></textarea><br>
+                    <textarea name="message"></textarea><br>
 
                     <button type="submit">Submit</button>
 
