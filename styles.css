@@ -48,12 +48,12 @@ button{
     border:1px solid black;
     border-radius: 8px;
     font-family:helvetica, arial, sans-serif;
-    background-color: white;
+    background-color:black;
+    color:white;
     padding:8px 8px;
 }
 button:hover{
-    background-color:black;
-    color:white;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -157,7 +157,6 @@ form{
 
 input,textarea{
     font-family:helvetica, arial, sans-serif;
-    width:100%;
     border:1px solid #262424;
     border-radius:8px;
     padding:0px 8px;
@@ -168,9 +167,13 @@ input{
     height:40px;
 }
 
+input:focus{
+}
+
 textarea{
     height:100px;
     resize: none;
+    padding:8px;
 }
 
 .radio-container{
@@ -178,16 +181,20 @@ textarea{
     flex-direction: row;
     height:auto;
     gap:24px;
-    
 }
 
 .radio-input{
     display: flex;
+    height:24px;
     flex-direction: row;
+    gap:16px;
+    align-items: center;
+    accent-color:#262424;
 
 }
 
 input[type="radio"]{
+    transform:scale(2);
 }
 
 @keyframes rotate {
