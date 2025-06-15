@@ -60,6 +60,7 @@ button:hover{
 
 .middle-container{
     width:100%;
+    height:100%;
     display:flex;
     flex-direction: row;
 }
@@ -253,6 +254,10 @@ input[type="radio"]{
     background-size:100px;
 }
 
+.bigger-content{
+    height:auto;
+}
+
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -300,10 +305,6 @@ input[type="radio"]{
         background-position: -5% 95%;
         background-size:300px;
     }
-
-    .middle-container{
-    /* height:100%; */
-}
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
