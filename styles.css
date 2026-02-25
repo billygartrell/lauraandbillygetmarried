@@ -364,3 +364,39 @@ input[type="radio"]{
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { ... }
+.update-post {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 28px;
+  padding: 16px;
+  border: 1px solid #f2dede;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.update-date {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.update-text {
+  margin: 0;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.update-gallery {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.update-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
