@@ -6,6 +6,7 @@ const UPDATES_HTML_FILE = "updates.html";
 const issueNumber = process.env.ISSUE_NUMBER;
 const issueBody = process.env.ISSUE_BODY || "";
 const issueCreatedAt = process.env.ISSUE_CREATED_AT || new Date().toISOString();
+const normalizedBody = issueBody.replace(/\r\n/g, "\n");
 
 if (!issueNumber) {
   throw new Error("ISSUE_NUMBER is required");
@@ -56,8 +57,8 @@ const formatDate = (iso) =>
     timeZone: "UTC",
   });
 
-const text = getField(issueBody, "Update text");
-const photosField = getField(issueBody, "Photo URLs (optional)");
+const text = getField(normalizedBody, "Update text") || normalizedBody.trim();
+const photosField = getField(normalizedBody, "Photo URLs (optional)");
 const images = [...new Set([...extractUrls(text), ...extractUrls(photosField)])];
 
 if (!text) {

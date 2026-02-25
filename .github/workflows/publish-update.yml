@@ -2,7 +2,7 @@ name: Publish update from form
 
 on:
   issues:
-    types: [opened]
+    types: [opened, edited, reopened]
 
 permissions:
   contents: write
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   publish:
-    if: contains(join(github.event.issue.labels.*.name, ','), 'update-post')
+    if: contains(join(github.event.issue.labels.*.name, ','), 'update-post') || startsWith(github.event.issue.title, 'Update:')
     runs-on: ubuntu-latest
 
     steps:
