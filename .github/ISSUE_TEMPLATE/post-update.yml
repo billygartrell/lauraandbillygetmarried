@@ -1,0 +1,29 @@
+name: Post an update
+description: Publish a honeymoon update to the updates page
+title: "Update: "
+labels:
+  - update-post
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit this form from your phone to publish a new update.
+        You can upload photos into a text box by tapping image/upload in GitHub mobile or web.
+  - type: textarea
+    id: update_text
+    attributes:
+      label: Update text
+      description: Main text for this post.
+      placeholder: We made it to Rome today and found a tiny coffee shop near the hotel...
+    validations:
+      required: true
+  - type: textarea
+    id: photos
+    attributes:
+      label: Photo URLs (optional)
+      description: Paste image URLs or markdown image lines. One per line is easiest.
+      placeholder: |
+        https://example.com/photo1.jpg
+        ![Beach](https://example.com/photo2.jpg)
+    validations:
+      required: false
