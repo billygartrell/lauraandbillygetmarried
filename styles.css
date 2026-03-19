@@ -307,6 +307,12 @@ input[type="radio"]{
     padding-bottom:12px;
   }
 
+  .post {
+    padding-top:24px;
+    padding-bottom:24px;
+    border-bottom:1px solid #f9ecec;
+  }
+
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
