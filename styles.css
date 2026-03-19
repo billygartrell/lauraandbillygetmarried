@@ -301,6 +301,12 @@ input[type="radio"]{
     border-left: 1px solid #f9ecec;
   }
 
+  .description{
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom:12px;
+  }
+
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
