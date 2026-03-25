@@ -58,6 +58,39 @@ button:hover{
     color:#262424;
 }
 
+.local-nav {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid #786363;
+    border-radius: 10px;
+}
+
+#post-index {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.local-nav button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ensure page content doesn’t hide under fixed nav */
+@media (min-width: 768px) {
+  .text-container {
+    padding-top: 40px;
+  }
+}
+
 .middle-container {
     width: 100%;
     display: flex;
@@ -311,6 +344,10 @@ input[type="radio"]{
     padding-top:24px;
     padding-bottom:24px;
     border-bottom:1px solid #f9ecec;
+  }
+
+  .local-nav li a{
+    text-decoration: none;
   }
 
 
