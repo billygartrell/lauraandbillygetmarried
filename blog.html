@@ -17,6 +17,20 @@
       video.lazy-video.is-loaded {
         opacity: 1;
       }
+
+      .sort-links {
+        text-align: left;
+        margin: 20px 0;
+      }
+
+      .sort-links a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .sort-links a:hover {
+        text-decoration: underline;
+      }
     </style>
 
   </head>
@@ -75,6 +89,10 @@
                   </div> -->
 
                   <h2>Honeymoon Blog</h2>
+
+                  <div class="sort-links">
+                    <a href="#" id="show-oldest">Show Oldest Posts First</a> | <a href="#" id="show-recent">Show Recent Posts First</a>
+                  </div>
 
                       <div class="post">
                         <h3>That's All Folks!</h3>
@@ -1346,10 +1364,11 @@
         let currentIndex = 0;
 
         function updatePostNav() {
+          if (!postIndex) return;
           const total = posts.length;
           postIndex.textContent = `${currentIndex + 1} / ${total}`;
-          prevButton.disabled = currentIndex <= 0;
-          nextButton.disabled = currentIndex >= total - 1;
+          if (prevButton) prevButton.disabled = currentIndex <= 0;
+          if (nextButton) nextButton.disabled = currentIndex >= total - 1;
         }
 
         function scrollToIndex(index) {
@@ -1362,10 +1381,39 @@
           updatePostNav();
         }
 
-        prevButton.addEventListener('click', () => scrollToIndex(currentIndex - 1));
-        nextButton.addEventListener('click', () => scrollToIndex(currentIndex + 1));
+        if (prevButton) prevButton.addEventListener('click', () => scrollToIndex(currentIndex - 1));
+        if (nextButton) nextButton.addEventListener('click', () => scrollToIndex(currentIndex + 1));
 
         updatePostNav();
+
+        // Post sorting
+        let isReversed = false;
+        const showOldest = document.getElementById('show-oldest');
+        const showRecent = document.getElementById('show-recent');
+        if (showOldest) {
+          showOldest.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!isReversed) {
+              const posts = Array.from(document.querySelectorAll('.post'));
+              posts.reverse().forEach(post => post.parentNode.appendChild(post));
+              isReversed = true;
+              currentIndex = 0; // Reset to first post
+              updatePostNav();
+            }
+          });
+        }
+        if (showRecent) {
+          showRecent.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (isReversed) {
+              const posts = Array.from(document.querySelectorAll('.post'));
+              posts.reverse().forEach(post => post.parentNode.appendChild(post));
+              isReversed = false;
+              currentIndex = 0; // Reset to first post
+              updatePostNav();
+            }
+          });
+        }
       });
     </script>
 
